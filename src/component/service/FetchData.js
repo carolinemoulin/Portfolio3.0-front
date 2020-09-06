@@ -1,6 +1,6 @@
 class FetchData {
   constructor() {
-    this.url = 'http://api.moca2246.odns.fr/';
+    this.url = 'http://api-portfolio.caroline-moulin.fr/';
     // this.headers = {
     //   "Content-Type": "application/json",
     //   Authorization: "Basic " + btoa("admin:admin") // btoa = encodage en base 64
