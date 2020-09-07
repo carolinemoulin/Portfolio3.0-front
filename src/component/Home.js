@@ -74,7 +74,7 @@ class Home extends Component {
               </div>
               <div className="col">
                 <a
-                  href="http://caroline-moulin.fr/"
+                  href="https://github.com/carolinemoulin"
                   target="_blank"
                   rel="noopener noreferrer"
                   alt="lien vers Github"

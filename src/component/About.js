@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./Header";
 import FetchData from "./service/FetchData";
 import { Link } from "react-router-dom";
+import { Card } from "react-bootstrap";
 
 class About extends Component {
   constructor(props) {
@@ -186,25 +187,17 @@ class About extends Component {
                   )}
                   {this.state.jobs.map((job) => {
                     return (
-                      <div
-                        id="job"
-                        className="row d-flex flex-column mb-5"
-                        key={job.id}
-                      >
-                        <div className="col">
-                          <h4>{job.position}</h4>
-                        </div>
-                        <div id="jobImg" className="col">
-                          <p>{job.entreprise}</p>
-                          <img src={job.logo} alt="" />
-                        </div>
-                        <div id="jobMissions" className="col">
-                          <div className="row">{job.missions}</div>
-                          <div className="row">
-                            De {job.startDate} à {job.endDate}
-                          </div>
-                        </div>
-                      </div>
+                      <Card id="job" key={job.id}>
+                        <Card.Title>{job.position}</Card.Title>
+                        <Card.Body>
+                          <Card.Img variant="bottom" src={job.logo} />
+                          <Card.Text>
+                            <p>{job.entreprise}</p>
+                            <p>{job.missions}</p>
+                            <p>De {job.startDate} à {job.endDate}</p>
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
                     );
                   })}
                 </div>
