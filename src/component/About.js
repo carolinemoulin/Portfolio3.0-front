@@ -187,14 +187,14 @@ class About extends Component {
                   )}
                   {this.state.jobs.map((job) => {
                     return (
-                      <Card id="job" key={job.id}>
+                      <Card id="job" className="row" key={job.id}>
                         <Card.Title>{job.position}</Card.Title>
                         <Card.Body>
                           <Card.Img variant="bottom" src={job.logo} />
                           <Card.Text>
                             <p>{job.entreprise}</p>
                             <p>{job.missions}</p>
-                            <p>De {job.startDate} à {job.endDate}</p>
+                            <p>Du {job.startDate} au {job.endDate}</p>
                           </Card.Text>
                         </Card.Body>
                       </Card>
@@ -215,15 +215,15 @@ class About extends Component {
                 )}
                 {this.state.trainings.map((training) => {
                   return (
-                    <div id="training" className="row" key={training.id}>
-                      <div id="trainingImg" className="col">
-                        <h4>{training.graduate}</h4>
-                      </div>
-                      <div id="trainingDescription" className="col">
-                        <div className="row">{training.institution}</div>
-                        <div className="row">{training.date}</div>
-                      </div>
-                    </div>
+                    <Card id="training" className="row" key={training.id}>
+                      <Card.Title>{training.graduate}</Card.Title>
+                        <Card.Body>
+                          <Card.Text>
+                            <p>{training.institution}</p>
+                            <p>{training.date}</p>
+                          </Card.Text>
+                        </Card.Body>
+                    </Card>
                   );
                 })}
               </div>
