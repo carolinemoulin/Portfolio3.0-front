@@ -3,6 +3,7 @@ import Header from "./Header";
 import FetchData from "./service/FetchData";
 import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
+import Footer from './Footer';
 
 class About extends Component {
   constructor(props) {
@@ -230,6 +231,7 @@ class About extends Component {
             </section>
           </div>
         </main>
+        <Footer/>
       </div>
     );
   }

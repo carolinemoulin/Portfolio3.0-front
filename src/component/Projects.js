@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import FetchData from "./service/FetchData";
 import Header from "./Header";
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
 
 class Projects extends Component {
   constructor(props) {
@@ -130,6 +131,7 @@ class Projects extends Component {
             </div>
           </div>
         </main>
+        <Footer/>
       </div>
     );
   }

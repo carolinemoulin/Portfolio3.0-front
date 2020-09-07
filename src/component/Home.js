@@ -56,6 +56,8 @@ class Home extends Component {
           <div className="row">
             <h2>Accueil</h2>
           </div>
+          <p>Après les formations d'OpenClassrooms et de Diginamic, je souhaite trouver un emploi en tant que Développeuse Web.</p>
+          <p>Vous pouvez découvrir les projets que j'ai créés à ces occasions.</p>
           <section>
             <Slideshow />
           </section>
