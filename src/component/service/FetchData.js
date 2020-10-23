@@ -81,6 +81,27 @@ class FetchData {
 
   }
 
+  postContact = ({ email, message }) => {
+    // const resData = response.json();
+    // console.log('resData : ', resData);
+    return fetch(`${this.url}admin/mails`, {
+      method: "POST",
+      headers: this.headers,
+      body: JSON.stringify({
+        email, message
+      })
+    }).then(function (response) {
+      if (response.status !== 201) {
+        throw new Error("Erreur " + response.status);
+      }
+      return response.json();// teste si c'est bien du json
+    })
+      .then(function (data) {
+        console.log('data : ', data);// J'ai ma donnée au format json
+        return data;
+      });
+  }
+
 }
 
 export default FetchData;

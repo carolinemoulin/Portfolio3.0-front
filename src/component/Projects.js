@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import FetchData from "./service/FetchData";
 import Header from "./Header";
-import { Link } from 'react-router-dom';
-import Footer from './Footer';
+import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 class Projects extends Component {
   constructor(props) {
@@ -44,45 +44,51 @@ class Projects extends Component {
 
   isSelected = (path) => {
     const urlPath = this.props.location.pathname;
-    return path === urlPath ? "btn-primary" : "btn-secondary"
-  }
+    return path === urlPath ? "btn-primary" : "btn-secondary";
+  };
   render() {
     return (
       <div className="App">
         <Header path="/home" />
         <main className="container">
-        <div className="row">
+          <div className="row">
             <div className="col">
-            <nav>
+              <nav>
                 <ul className="list-unstyled d-flex justify-content-center">
                   <li>
-                  <Link
-                      className={`p-1 m-1 h3 btn ${this.isSelected(
-                        "/"
-                      )}`}
+                    <Link
+                      className={`p-1 m-1 h3 btn ${this.isSelected("/")}`}
                       to="/"
                     >
                       Accueil
                     </Link>
                   </li>
                   <li>
-                  <Link
-                      className={`p-1 m-1 h3 btn ${this.isSelected(
-                        "/about"
-                      )}`}
+                    <Link
+                      className={`p-1 m-1 h3 btn ${this.isSelected("/about")}`}
                       to="/about"
                     >
                       Expériences
                     </Link>
                   </li>
                   <li>
-                  <Link
+                    <Link
                       className={`p-1 m-1 h3 btn ${this.isSelected(
                         "/projects"
                       )}`}
                       to="/projects"
                     >
                       Projets
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className={`p-1 m-1 h3 btn ${this.isSelected(
+                        "/contact"
+                      )}`}
+                      to="/contact"
+                    >
+                      Contact
                     </Link>
                   </li>
                 </ul>
@@ -110,7 +116,10 @@ class Projects extends Component {
                     <div id="projectImg" className="col-sm-6 col-lg-5">
                       <img src={project.image} alt="" />
                     </div>
-                    <div id="projectDescription" className="col-sm-6 col-lg-7 d-flex flex-column justify-content-center align-items-center">
+                    <div
+                      id="projectDescription"
+                      className="col-sm-6 col-lg-7 d-flex flex-column justify-content-center align-items-center"
+                    >
                       <div className="row">
                         <h4>{project.title_project}</h4>
                       </div>
@@ -131,7 +140,7 @@ class Projects extends Component {
             </div>
           </div>
         </main>
-        <Footer/>
+        <Footer />
       </div>
     );
   }

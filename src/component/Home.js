@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import Header from "./Header";
-import { Switch, Route, Link } from "react-router-dom";
 import About from "./About";
 import Projects from "./Projects";
 import Slideshow from "./Slideshow";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
 import Footer from './Footer';
+import { Switch, Route, Link } from "react-router-dom";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+
 
 class Home extends Component {
   state = {};
@@ -47,6 +48,16 @@ class Home extends Component {
                       to="/projects"
                     >
                       Projets
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className={`p-1 m-1 h3 btn ${this.isSelected(
+                        "/contact"
+                      )}`}
+                      to="/contact"
+                    >
+                      Contact
                     </Link>
                   </li>
                 </ul>

@@ -130,6 +130,16 @@ class About extends Component {
                       Projets
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      className={`p-1 m-1 h3 btn ${this.isSelected(
+                        "/contact"
+                      )}`}
+                      to="/contact"
+                    >
+                      Contact
+                    </Link>
+                  </li>
                 </ul>
               </nav>
             </div>
