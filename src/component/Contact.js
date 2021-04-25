@@ -32,7 +32,7 @@ class Contact extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const data = JSON.stringify(this.state)
-    console.log(data)
+    // console.log(data)
     this.fd
       .postContact(data)
   }

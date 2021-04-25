@@ -50,7 +50,7 @@ class Home extends Component {
                       Projets
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       className={`p-1 m-1 h3 btn ${this.isSelected(
                         "/contact"
@@ -59,7 +59,7 @@ class Home extends Component {
                     >
                       Contact
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </nav>
             </div>

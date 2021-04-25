@@ -14,7 +14,7 @@ class Projects extends Component {
   }
 
   successProject = (data) => {
-    console.log("Dans successProject");
+    // console.log("Dans successProject");
     // copie du state
     const copy_state = { ...this.state };
     // modification de la copie du state
@@ -24,7 +24,7 @@ class Projects extends Component {
   };
 
   failedProject = (error) => {
-    console.log("Dans failedProject", error);
+    // console.log("Dans failedProject", error);
     // copie du state
     const copy_state = { ...this.state };
     // modification de la copie du state
@@ -81,7 +81,7 @@ class Projects extends Component {
                       Projets
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       className={`p-1 m-1 h3 btn ${this.isSelected(
                         "/contact"
@@ -90,7 +90,7 @@ class Projects extends Component {
                     >
                       Contact
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </nav>
             </div>

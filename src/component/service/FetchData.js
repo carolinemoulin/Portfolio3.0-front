@@ -1,6 +1,6 @@
 class FetchData {
   constructor() {
-    this.url = 'http://api-portfolio.caroline-moulin.fr/';
+    this.url = 'http://localhost:9000/';
     // this.headers = {
     //   "Content-Type": "application/json",
     //   Authorization: "Basic " + btoa("admin:admin") // btoa = encodage en base 64
@@ -20,7 +20,7 @@ class FetchData {
       return response.json();// teste si c'est bien du json
     })
       .then(function (data) {
-        console.log('data : ', data);// J'ai ma donnée au format json
+        // console.log('data : ', data);// J'ai ma donnée au format json
         return data;
       });
 
@@ -36,11 +36,11 @@ class FetchData {
         if (response.status !== 200) {
           throw new Error("Erreur" + response.json());
         }
-        console.log("Dans le fetch de jobs");
+        // console.log("Dans le fetch de jobs");
         return response.json();
       })
       .then(function (data) {
-        console.log("dans le fetch get jobs :" , data);
+        // console.log("dans le fetch get jobs :" , data);
         return data;
       });
   };
@@ -57,7 +57,7 @@ class FetchData {
       return response.json();// teste si c'est bien du json
     })
       .then(function (data) {
-        console.log('data : ', data);// J'ai ma donnée au format json
+        // console.log('data : ', data);// J'ai ma donnée au format json
         return data;
       });
 
@@ -75,15 +75,13 @@ class FetchData {
       return response.json();// teste si c'est bien du json
     })
       .then(function (data) {
-        console.log('data : ', data);// J'ai ma donnée au format json
+        // console.log('data : ', data);// J'ai ma donnée au format json
         return data;
       });
 
   }
 
   postContact = ({ email, message }) => {
-    // const resData = response.json();
-    // console.log('resData : ', resData);
     return fetch(`${this.url}admin/mails`, {
       method: "POST",
       headers: this.headers,
@@ -92,12 +90,12 @@ class FetchData {
       })
     }).then(function (response) {
       if (response.status !== 201) {
-        throw new Error("Erreur " + response.status);
+        throw new Error("erreur " + response.status);
       }
       return response.json();// teste si c'est bien du json
     })
       .then(function (data) {
-        console.log('data : ', data);// J'ai ma donnée au format json
+        // console.log('data : ', data);// J'ai ma donnée au format json
         return data;
       });
   }

@@ -17,7 +17,7 @@ class About extends Component {
   }
 
   successSkill = (dataSkill) => {
-    console.log("Dans successSkill");
+    // console.log("Dans successSkill");
     // copie du state
     const copy_state = { ...this.state };
     // modification de la copie du state
@@ -27,7 +27,7 @@ class About extends Component {
   };
 
   failedSkill = (error) => {
-    console.log("Dans failedSkill", error);
+    // console.log("Dans failedSkill", error);
     // copie du state
     const copy_state = { ...this.state };
     // modification de la copie du state
@@ -37,7 +37,7 @@ class About extends Component {
   };
 
   successJob = (dataJob) => {
-    console.log("Dans successJob");
+    // console.log("Dans successJob");
     // copie du state
     const copy_state = { ...this.state };
     // modification de la copie du state
@@ -47,7 +47,7 @@ class About extends Component {
   };
 
   failedJob = (error) => {
-    console.log("Dans failedJob", error);
+    // console.log("Dans failedJob", error);
     // copie du state
     const copy_state = { ...this.state };
     // modification de la copie du state
@@ -57,7 +57,7 @@ class About extends Component {
   };
 
   successTraining = (dataTraining) => {
-    console.log("Dans successTraining");
+    // console.log("Dans successTraining");
     // copie du state
     const copy_state = { ...this.state };
     // modification de la copie du state
@@ -67,7 +67,7 @@ class About extends Component {
   };
 
   failedTraining = (error) => {
-    console.log("Dans failedTraining", error);
+    // console.log("Dans failedTraining", error);
     // copie du state
     const copy_state = { ...this.state };
     // modification de la copie du state
@@ -130,7 +130,7 @@ class About extends Component {
                       Projets
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       className={`p-1 m-1 h3 btn ${this.isSelected(
                         "/contact"
@@ -139,7 +139,7 @@ class About extends Component {
                     >
                       Contact
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </nav>
             </div>

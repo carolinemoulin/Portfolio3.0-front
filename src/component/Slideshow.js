@@ -12,7 +12,7 @@ class Slideshow extends Component {
   }
 
   successProject = (data) => {
-    console.log("Dans successProject");
+    // console.log("Dans successProject");
     // copie du state
     const copy_state = { ...this.state };
     // modification de la copie du state
@@ -22,7 +22,7 @@ class Slideshow extends Component {
   };
 
   failedProject = (error) => {
-    console.log("Dans failedProject", error);
+    // console.log("Dans failedProject", error);
     // copie du state
     const copy_state = { ...this.state };
     // modification de la copie du state
